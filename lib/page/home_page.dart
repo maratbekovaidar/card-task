@@ -9,6 +9,8 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
+
+
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class _HomePageState extends State<HomePage> {
               action: true,
               title: "Magnum",
               description: "Supermarket at Nur-Sultan",
-              comment: "Some comment",
+              comment: "Some comment sdfmk sdjnfksdn fksjdnfjksjdfbjsdjfnsd skdfjnnskdjfjnks skdjfnnksdfn sjdfnksjdfn",
               address: "Nur-Sultan",
               image: "assets/magnum.png",
           ),
@@ -29,7 +31,7 @@ class _HomePageState extends State<HomePage> {
               action: false,
               title: "Galmart",
               description: "Supermarket at Semey",
-              comment: "Some comment",
+              comment: "Some comment asdadsasdasdsa",
               address: "Semey",
               image: "assets/galmart.png",
           ),
@@ -142,11 +144,16 @@ class CardTask extends StatelessWidget {
                 ],
               ),
             ),
-            Row(
+            Flex(
+              direction: Axis.horizontal,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Icon(
-                  Icons.comment,
-                  color: action == false ? Colors.grey : Colors.white
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  child: Icon(
+                    Icons.comment,
+                    color: action == false ? Colors.grey : Colors.white
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -160,7 +167,7 @@ class CardTask extends StatelessWidget {
                           topLeft: Radius.circular(0)
                       ),
                     ),
-                    child: Padding(
+                    child: Container(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         comment,
@@ -172,7 +179,7 @@ class CardTask extends StatelessWidget {
                     ),
                     // padding: EdgeInsets.all(30),
                     width: 250,
-                    height: 50,
+                    // height: 510,
                   ),
                 )
               ],
