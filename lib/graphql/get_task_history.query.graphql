@@ -1,0 +1,8 @@
+query getTasks {
+    magnums {
+        id,
+        name,
+        adress,
+        number
+    }
+}
